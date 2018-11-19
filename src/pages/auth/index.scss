@@ -1,0 +1,49 @@
+.auth-contianer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.content {
+    width: 30.31rem;
+    display: flex;
+    flex-direction: column;
+
+    &.login {
+        background: #FFFFFF;
+        box-shadow: 0.25rem 0.125rem 0.825rem 0 rgba(0, 0, 0, 0.50);
+        border-radius: 0.625rem;
+        padding-bottom: 2.94rem;
+    }
+
+    .logo {
+        width: 6.94rem;
+        height: 10.01rem;
+        outline: none;
+        align-self: center;
+        margin-top: 2.94rem;
+        margin-bottom: 4.76rem;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .input {
+            width: 21.65rem;
+            height: 3.26rem;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 3.17rem;
+            padding-left: 0.85rem;
+            box-sizing: border-box;
+            background: #fff;
+            border: 0 solid #ffffff;
+            border-bottom: 0.09rem solid #D8D8D8;
+        }
+    }
+}
