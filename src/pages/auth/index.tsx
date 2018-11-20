@@ -4,8 +4,14 @@ import { Route, Switch } from 'react-router-dom';
 import './index.scss';
 import Register from './register/index';
 import Login from './login/index';
-
-class Auth extends React.Component {
+const initState = {};
+type State = Readonly<typeof initState>;
+class Auth extends React.Component<object, State> {
+    readonly state: State;
+    constructor(props: Readonly<object>) {
+        super(props);
+        this.state = initState;
+    }
     render() {
         return (
             <div className="auth-contianer">

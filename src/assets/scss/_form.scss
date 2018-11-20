@@ -1,0 +1,23 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    &>input {
+        display: none;
+    }
+
+    &>input+i {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 1.13rem;
+        height: 1.13rem;
+        margin-right: 0.64rem;
+        border: 0.125rem solid #919191;
+    }
+
+    &>input:checked+i {
+        background: #F00;
+    }
+}
