@@ -1,17 +1,44 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Provider, connect } from 'react-redux';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { ApplicationState } from './store/index';
 import IndexPage from './pages/index/index';
 import AuthPage from './pages/auth/index';
+import { Store } from 'redux';
 
-class App extends Component {
+interface PropsFromState {}
+
+interface PropsFromDispatch {
+    [key: string]: any;
+}
+
+// Any additional component props go here.
+interface OwnProps {
+    store: Store;
+}
+
+// Create an intersection type of the component props and our Redux props.
+type AllProps = PropsFromState & PropsFromDispatch & OwnProps;
+
+class App extends Component<AllProps> {
     render() {
+        const { store, isLogin } = this.props;
+        console.log('isLogin:', isLogin);
         return (
-            <Switch>
-                <Route exact path="/" component={IndexPage} />
-                <Route path="/auth" component={AuthPage} />
-            </Switch>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path="/" component={IndexPage} />
+                        <Route path="/auth" component={AuthPage} />
+                    </Switch>
+                </BrowserRouter>
+            </Provider>
         );
     }
 }
 
-export default App;
+const mapStateToProps = ({ user }: ApplicationState) => ({
+    isLogin: user.isLogin
+});
+
+export default connect<PropsFromState, PropsFromDispatch, OwnProps, ApplicationState>(mapStateToProps)(App);
