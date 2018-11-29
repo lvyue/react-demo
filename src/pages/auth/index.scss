@@ -64,11 +64,17 @@
 .btn-login {
     width: 21.56rem;
     height: 3.43rem;
-    background: #2EC17C;
+
     border-radius: 0.315rem;
     outline: none;
     border: 0;
     font-size: 1.5rem;
-    color: #fff;
     line-height: 3.43rem;
+    background: #2EC17C;
+    color: #fff;
+
+    &[disabled] {
+        background: rgb(192, 201, 197);
+        color: #666;
+    }
 }

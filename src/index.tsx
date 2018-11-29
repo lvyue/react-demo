@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './assets/scss/app.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createBrowserHistory } from 'history';
 import Store from './store/index';
 
-const history = createBrowserHistory();
-const initialState = { user: { isLogin: false } };
-const store = Store(history, initialState);
+const initialState = { user: { isLogin: false, token: '' } };
+const store = Store(initialState);
 
 ReactDOM.render(<App store={store} />, document.getElementById('root'));
 

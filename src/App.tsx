@@ -23,7 +23,6 @@ type AllProps = PropsFromState & PropsFromDispatch & OwnProps;
 class App extends Component<AllProps> {
     render() {
         const { store, isLogin } = this.props;
-        console.log('isLogin:', isLogin);
         return (
             <Provider store={store}>
                 <BrowserRouter>

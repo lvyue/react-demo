@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './index.scss';
-import Register from './register/index';
-import Login from './login/index';
+import Register from './register';
+import Login from './login';
 const initState = {};
 type State = Readonly<typeof initState>;
 class Auth extends React.Component<object, State> {
