@@ -1,6 +1,10 @@
 @import 'variables.scss';
 @import 'reset.scss';
+@import 'container.scss';
+@import 'button.scss';
 @import 'form.scss';
+@import 'login.scss';
+@import 'menu.scss';
 
 #root {
   display: flex;

@@ -3,6 +3,7 @@ import axios from 'axios';
 
 //取消请求
 const CancelToken = axios.CancelToken;
+export const AuthorizationToken = 'user-authorization-token';
 
 // //开始请求设置，发起拦截处理
 // axios.interceptors.request.use(
@@ -36,5 +37,25 @@ const client = axios.create({
         'Content-Type': 'application/json'
     }
 });
+client.interceptors.request.use(
+    function(config) {
+        // Do something before request is sent
+        const token = localStorage.getItem(AuthorizationToken);
+        if (token) {
+            config.headers['authorization'] = `Bearer ${token}`;
+        }
+        return config;
+    },
+    error => Promise.reject(error)
+);
 
+client.interceptors.request.use(
+    response => {
+        if (response.data && response.data.token) {
+            localStorage.setItem(AuthorizationToken, response.data.token);
+        }
+        return response;
+    },
+    error => Promise.reject(error)
+);
 export default client;

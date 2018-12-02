@@ -1,0 +1,20 @@
+.btn {
+    appearance: none;
+    display: inline-block;
+    outline: none;
+    padding: 0 0.5rem;
+    border-radius: 0.125rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-sm {
+    font-size: 0.88rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.btn[disabled] {
+    background: #BFBFBF;
+    color: #fff;
+}

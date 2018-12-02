@@ -1,5 +1,5 @@
 import { Action } from 'redux';
-import { ADD_USER, UPDATE_USER, REMOVE_USER } from './constants';
+import { ADD_USER, UPDATE_USER, REMOVE_USER, USER_LOGIN, USER_INFO } from './constants';
 
 export interface User {
     _id: string;
@@ -47,4 +47,12 @@ export interface RemoveUserAction extends Action {
     token: string;
 }
 
-export type UserActions = AddUserAction | UpdateUserAction | RemoveUserAction;
+export interface UserLoginAction extends Action {
+    type: USER_LOGIN;
+}
+
+export interface UserInfoAction extends Action {
+    type: USER_INFO;
+}
+
+export type UserActions = AddUserAction | UpdateUserAction | RemoveUserAction | UserLoginAction | UserInfoAction;

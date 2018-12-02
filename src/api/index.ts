@@ -1,3 +1,3 @@
-import * as Auth from './auth';
+import * as User from './user';
 
-export default { Auth };
+export default { User };

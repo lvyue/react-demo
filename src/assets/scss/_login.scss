@@ -1,0 +1,182 @@
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &.login {
+        background: url(../images/auth-bg.png) repeat;
+    }
+}
+
+.content {
+    width: 30.31rem;
+    display: flex;
+    flex-direction: column;
+
+    &.login {
+        background: #FFFFFF;
+        box-shadow: 0.25rem 0.125rem 0.825rem 0 rgba(0, 0, 0, 0.50);
+        border-radius: 0.625rem;
+        padding-bottom: 2.94rem;
+    }
+
+    .logo {
+        width: 6.94rem;
+        height: 10.01rem;
+        outline: none;
+        align-self: center;
+        margin-top: 2.94rem;
+        margin-bottom: 4.76rem;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+
+        .input {
+            width: 21.65rem;
+            height: 3.26rem;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 3.17rem;
+            padding-left: 0.85rem;
+            box-sizing: border-box;
+            background: #fff;
+            border: 0 solid #ffffff;
+            border-bottom: 0.09rem solid #D8D8D8;
+        }
+
+        &.option {
+            height: 2.57rem;
+            font-size: 1.13rem;
+            line-height: 2.57rem;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 4rem;
+            padding-right: 4rem;
+            color: #919191;
+            align-items: center;
+        }
+    }
+
+    &.forget {
+        width: 15.75rem;
+
+        .logo {
+            width: 2.75rem;
+            height: 4.38rem;
+            margin-bottom: 0.5rem;
+            margin-top: auto;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            line-height: 2.06rem;
+            color: #2EC17C;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 0.88rem;
+            line-height: 1.25rem;
+            color: #2EC17C;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            display: flex;
+
+            .label {
+                height: 2rem;
+                font-size: 0.75rem;
+                line-height: 2rem;
+                color: #404040;
+                margin-right: 0.5rem;
+            }
+
+            .input-group {
+                display: flex;
+                flex: 1;
+                height: 2rem;
+                margin-bottom: 0.5rem;
+                align-items: center;
+                flex-direction: row;
+
+                input {
+                    padding: 0;
+                    width: auto;
+                    flex: 1;
+                    height: 2rem;
+                    font-size: 0.75rem;
+                    line-height: 1.88rem;
+                    border: 0.06rem solid #D9D9D9;
+                    padding-left: 0.5rem;
+
+                    &.code {
+                        width: 6.25rem;
+                    }
+                }
+
+                .codeBtn {
+                    appearance: none;
+                    width: 6.25rem;
+                    height: 2rem;
+                    font-size: 0.75rem;
+                    line-height: 1.88rem;
+                    margin-left: 0.5rem;
+                    outline: none;
+                    user-select: none;
+                    color: #fff;
+                    background: #2EC17C;
+                    border: 0.06rem solid #2EC17C;
+                }
+            }
+
+            &.tips {
+                .label {
+                    visibility: hidden;
+                }
+
+                .input-group {
+                    color: #E53935;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: center;
+
+            .btn {
+                width: 13rem;
+                font-size: 0.88rem;
+            }
+        }
+    }
+}
+
+.btn-login {
+    width: 21.56rem;
+    height: 3.43rem;
+
+    border-radius: 0.315rem;
+    outline: none;
+    border: 0;
+    font-size: 1.5rem;
+    line-height: 3.43rem;
+    background: #2EC17C;
+    color: #fff;
+
+    &[disabled] {
+        background: rgb(192, 201, 197);
+        color: #666;
+    }
+}
