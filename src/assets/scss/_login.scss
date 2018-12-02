@@ -65,7 +65,11 @@
     }
 
     &.forget {
-        width: 15.75rem;
+        width: 17rem;
+
+        &.hide {
+            display: none;
+        }
 
         .logo {
             width: 2.75rem;
@@ -90,20 +94,28 @@
             margin-bottom: 1.5rem;
         }
 
+        fieldset {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
         .form-control {
             display: flex;
 
             .label {
+                flex: 1;
                 height: 2rem;
                 font-size: 0.75rem;
                 line-height: 2rem;
                 color: #404040;
                 margin-right: 0.5rem;
+                text-align: right;
             }
 
             .input-group {
                 display: flex;
-                flex: 1;
+                width: 13rem;
                 height: 2rem;
                 margin-bottom: 0.5rem;
                 align-items: center;
@@ -122,6 +134,14 @@
                     &.code {
                         width: 6.25rem;
                     }
+
+                    &:focus {
+                        border-color: #2EC17C;
+                    }
+
+                    &.error {
+                        border-color: #E53935;
+                    }
                 }
 
                 .codeBtn {
@@ -136,6 +156,7 @@
                     color: #fff;
                     background: #2EC17C;
                     border: 0.06rem solid #2EC17C;
+                    padding: 0;
                 }
             }
 
@@ -149,15 +170,19 @@
                     font-size: 0.75rem;
                 }
             }
-        }
 
-        .form-actions {
-            display: flex;
-            justify-content: center;
+            &.action {
+                display: flex;
+                justify-content: center;
 
-            .btn {
-                width: 13rem;
-                font-size: 0.88rem;
+                .label {
+                    visibility: hidden;
+                }
+
+                .btn {
+                    width: 13rem;
+                    font-size: 0.88rem;
+                }
             }
         }
     }

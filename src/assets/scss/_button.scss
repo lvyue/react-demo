@@ -15,6 +15,12 @@
 }
 
 .btn[disabled] {
-    background: #BFBFBF;
+    background: #BFBFBF !important;
+    border-color: #BFBFBF !important;
+    color: #fff !important;
+}
+
+.btn-success {
+    background: #2EC17C;
     color: #fff;
 }
