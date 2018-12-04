@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux';
 import { Action } from 'redux';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
-import { ApplicationState } from './store/index';
+import { ApplicationState } from '@/store/index';
 
 import { Store, Dispatch } from 'redux';
-import { User, UserActions } from './store/user/types';
-import * as UserAPI from './api/user';
-import { addUser, removeUser } from './store/user/actions';
+import { User, UserActions } from '@/store/user/types';
+import * as UserAPI from '@/api/user';
+import { addUser, removeUser } from '@/store/user/actions';
 
-import IndexPage from './pages/index/index';
-import AuthPage from './pages/auth/index';
-import HomePage from './pages/home/index';
+import IndexPage from '@/pages/index/index';
+import AuthPage from '@/pages/auth/index';
+import HomePage from '@/pages/home/index';
 
 interface PropsFromState {}
 

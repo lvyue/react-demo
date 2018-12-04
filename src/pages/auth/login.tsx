@@ -1,12 +1,12 @@
 import React, { Component, RefObject } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { ApplicationState } from '../../store/index';
-import logo from '../../assets/images/logo.png';
+import { ApplicationState } from '@/store/index';
+import logo from '@/assets/images/logo.png';
 import { Store, Dispatch } from 'redux';
-import { User, UserActions } from '../../store/user/types';
-import * as UserAPI from '../../api/user';
-import { addUser, removeUser } from '../../store/user/actions';
+import { User, UserActions } from '@/store/user/types';
+import * as UserAPI from '@/api/user';
+import { addUser, removeUser } from '@/store/user/actions';
 
 const state = {
     username: '',
@@ -95,7 +95,7 @@ class Login extends Component<Props, State> {
                             <i />
                             记住密码
                         </label>
-                        <Link to="/auth/forgetPassword">忘记密码</Link>
+                        <Link to="/auth/forget-password">忘记密码</Link>
                     </div>
                     <div className="input-group option" style={{ marginBottom: '5.55rem' }}>
                         <label htmlFor="autoLogin" className="checkbox">

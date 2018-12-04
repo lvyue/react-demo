@@ -1,12 +1,12 @@
 import React, { Component, RefObject } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { ApplicationState } from '../../store/index';
-import logo from '../../assets/images/logo.png';
+import { ApplicationState } from '@/store/index';
+import logo from '@/assets/images/logo.png';
 import { Store, Dispatch } from 'redux';
-import { User, UserActions } from '../../store/user/types';
-import * as UserAPI from '../../api/user';
-import { addUser, removeUser } from '../../store/user/actions';
+import { User, UserActions } from '@/store/user/types';
+import * as UserAPI from '@/api/user';
+import { addUser, removeUser } from '@/store/user/actions';
 
 const state = {
     phone: '',

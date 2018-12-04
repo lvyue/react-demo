@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es2015",
     "allowJs": true,
     "skipLibCheck": false,
@@ -13,6 +14,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "paths":{
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "src"
