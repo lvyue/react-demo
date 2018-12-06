@@ -85,6 +85,17 @@ class ForgetPassword extends Component<Props, State> {
                 this.setState({ sending: false });
             });
     };
+    saveNewPassword = async () => {
+        const { info, code, password } = this.state;
+        this.setState({ sending: true });
+        UserAPI.changePasswordByMessage(info, code, password)
+            .then(info => {
+                this.setState({ step: 2 });
+            })
+            .catch(() => {
+                this.setState({ sending: false });
+            });
+    };
     startTimer = () => {
         this.timer = window.setInterval(() => {
             let t = localStorage.getItem(UserPasswordInfoTimer);
@@ -111,6 +122,7 @@ class ForgetPassword extends Component<Props, State> {
     nextStep = () => {
         const { info, code } = this.state;
         localStorage.setItem(UserPasswordInfo, JSON.stringify({ info, code, time: Date.now() }));
+        window.clearTimeout(this.timer);
         this.setState({ step: 2 });
     };
     render() {
@@ -173,6 +185,7 @@ class ForgetPassword extends Component<Props, State> {
                         </div>
                     </div>
                 </div>
+
                 <div className={['content', 'forget', step === 2 ? '' : 'hide'].join(' ')}>
                     <img src={logo} alt="6pan" className="logo" />
                     <h1 className="title">密码找回</h1>

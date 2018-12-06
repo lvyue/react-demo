@@ -83,5 +83,6 @@ export const menus = [
 
 export const RegExp = {
     phone: /^1[0-9]{10}$/,
-    code: /^\d{6}$/
+    code: /^\d{6}$/,
+    password: [{ rule: '', text: '' }]
 };
